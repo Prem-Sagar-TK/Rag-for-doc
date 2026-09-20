@@ -1,0 +1,8 @@
+Remote Work Guidelines
+======================
+
+Eligible employees may work remotely up to three days per week.
+Core collaboration hours are 10:00 AM to 3:00 PM local time.
+Employees must be reachable on company chat and email during core hours.
+Equipment such as laptops and monitors may be requested through IT support.
+Security: company VPN must be used when accessing internal systems from outside the office.

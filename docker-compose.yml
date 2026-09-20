@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      - CORS_ORIGINS=http://localhost:5173,http://localhost:3000,http://localhost:8080
+      - UPLOAD_DIR=/app/data/uploads
+      - CHROMA_DIR=/app/data/chroma
+      - DOCUMENTS_DB=/app/data/documents.json
+    volumes:
+      - rag_uploads:/app/data/uploads
+      - rag_chroma:/app/data/chroma
+      - rag_meta:/app/data
+
+  frontend:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_BASE=http://localhost:8000
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+
+volumes:
+  rag_uploads:
+  rag_chroma:
+  rag_meta:

@@ -1,0 +1,21 @@
+Acme Corp Employee Leave Policy
+================================
+
+Annual Leave
+------------
+The company provides 20 days of annual leave per calendar year for full-time employees.
+Unused annual leave may be carried over up to a maximum of 5 days into the next year.
+
+Sick Leave
+----------
+Employees are entitled to 10 days of paid sick leave each year.
+A medical certificate is required for absences longer than 3 consecutive days.
+
+Notice Period
+-------------
+Employees must provide at least 14 days of advance notice when requesting annual leave,
+except in emergency situations approved by a manager.
+
+Holiday Closures
+----------------
+The company observes national public holidays. These days do not count against annual leave.

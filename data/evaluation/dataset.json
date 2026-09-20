@@ -1,0 +1,44 @@
+[
+  {
+    "id": "leave_days",
+    "question": "How many days of annual leave does the company provide?",
+    "expected_answer": "20 days",
+    "expected_source": "employee_policy",
+    "expected_abstain": false
+  },
+  {
+    "id": "sick_leave",
+    "question": "How many sick leave days are employees entitled to?",
+    "expected_answer": "10 days",
+    "expected_source": "employee_policy",
+    "expected_abstain": false
+  },
+  {
+    "id": "maternity_missing",
+    "question": "What is the company's maternity leave policy?",
+    "expected_answer": null,
+    "expected_source": null,
+    "expected_abstain": true
+  },
+  {
+    "id": "unrelated_france",
+    "question": "What is the capital of France?",
+    "expected_answer": null,
+    "expected_source": null,
+    "expected_abstain": true
+  },
+  {
+    "id": "csv_alice_role",
+    "question": "What is Alice Johnson's role?",
+    "expected_answer": "Engineer",
+    "expected_source": "employees",
+    "expected_abstain": false
+  },
+  {
+    "id": "txt_remote",
+    "question": "What is the remote work policy?",
+    "expected_answer": "three days",
+    "expected_source": "remote_work",
+    "expected_abstain": false
+  }
+]

@@ -1,0 +1,170 @@
+{
+  "vector_backend": "numpy",
+  "use_fake_embeddings": true,
+  "relevance_threshold": 0.3,
+  "top_k": 5,
+  "metrics": {
+    "total_cases": 6,
+    "retrieval_hit_rate": 1.0,
+    "average_max_relevance": 0.3695,
+    "answer_correctness": 1.0,
+    "abstention_rate": 0.3333,
+    "citation_correctness": 1.0
+  },
+  "cases": [
+    {
+      "question": "How many days of annual leave does the company provide?",
+      "expected_answer": "20 days",
+      "expected_source": "employee_policy",
+      "expected_abstain": false,
+      "actual_answer": "Acme Corp Employee Leave Policy\r\n================================\r\n\r\nAnnual Leave\r\n------------\r\nThe company provides 20 days of annual leave per calendar year for full-time employees.\r\nUnused annual leave may be carried over up to a maximum of 5 days into the next year.\r\n\r\nSick Leave\r\n----------\r\nEmployees are entitled to 10 days of paid sick leave each year.\r\nA medical certificate is required for absences longer than 3 consecutive days.\r\n\r\nNotice Period\r\n-------------\r\nEmployees must provide at least 14 days of advance notice when requesting annual leave,\r\nexcept in emergency situations approved by a manager.\r\n\r\nHoliday Closures\r\n----------------\r\nThe company observes national public holidays. These days do not count against annual leave.",
+      "sources": [
+        {
+          "filename": "employee_policy.txt",
+          "page": null,
+          "chunk_id": "chunk_9a38e87c5c99",
+          "score": 0.5131,
+          "row_number": null,
+          "preview": "Acme Corp Employee Leave Policy\r ================================\r \r Annual Leave\r ------------\r The company provides 20 days of annual leave per calendar year\u2026"
+        },
+        {
+          "filename": "employee_policy.pdf",
+          "page": 1,
+          "chunk_id": "chunk_47b757ba51b9",
+          "score": 0.4856,
+          "row_number": null,
+          "preview": "Acme Corp Employee Leave Policy Annual Leave: The company provides 20 days of annual leave per calendar year for full-time employees. Sick Leave: Employees are\u2026"
+        },
+        {
+          "filename": "remote_work.txt",
+          "page": null,
+          "chunk_id": "chunk_ab95720c7b26",
+          "score": 0.4415,
+          "row_number": null,
+          "preview": "Remote Work Guidelines\r ======================\r \r Eligible employees may work remotely up to three days per week.\r Core collaboration hours are 10:00 AM to 3:0\u2026"
+        },
+        {
+          "filename": "employee_policy.pdf",
+          "page": 2,
+          "chunk_id": "chunk_5ef32afa2921",
+          "score": 0.4116,
+          "row_number": null,
+          "preview": "Holiday Closures The company observes national public holidays. These days do not count against annual leave."
+        }
+      ],
+      "abstained": false,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": true,
+      "max_score": 0.5131
+    },
+    {
+      "question": "How many sick leave days are employees entitled to?",
+      "expected_answer": "10 days",
+      "expected_source": "employee_policy",
+      "expected_abstain": false,
+      "actual_answer": "Acme Corp Employee Leave Policy\nAnnual Leave: The company provides 20 days of annual leave\nper calendar year for full-time employees.\nSick Leave: Employees are entitled to 10 days of paid sick leave\neach year. A medical certificate is required for absences\nlonger than 3 consecutive days.\nNotice: Employees must provide at least 14 days advance notice.",
+      "sources": [
+        {
+          "filename": "employee_policy.pdf",
+          "page": 1,
+          "chunk_id": "chunk_47b757ba51b9",
+          "score": 0.4854,
+          "row_number": null,
+          "preview": "Acme Corp Employee Leave Policy Annual Leave: The company provides 20 days of annual leave per calendar year for full-time employees. Sick Leave: Employees are\u2026"
+        },
+        {
+          "filename": "employee_policy.txt",
+          "page": null,
+          "chunk_id": "chunk_9a38e87c5c99",
+          "score": 0.4781,
+          "row_number": null,
+          "preview": "Acme Corp Employee Leave Policy\r ================================\r \r Annual Leave\r ------------\r The company provides 20 days of annual leave per calendar year\u2026"
+        },
+        {
+          "filename": "remote_work.txt",
+          "page": null,
+          "chunk_id": "chunk_ab95720c7b26",
+          "score": 0.3301,
+          "row_number": null,
+          "preview": "Remote Work Guidelines\r ======================\r \r Eligible employees may work remotely up to three days per week.\r Core collaboration hours are 10:00 AM to 3:0\u2026"
+        }
+      ],
+      "abstained": false,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": true,
+      "max_score": 0.4854
+    },
+    {
+      "question": "What is the company's maternity leave policy?",
+      "expected_answer": null,
+      "expected_source": null,
+      "expected_abstain": true,
+      "actual_answer": "I couldn't find enough relevant information in the uploaded documents to answer that question.",
+      "sources": [],
+      "abstained": true,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": null,
+      "max_score": 0.3575
+    },
+    {
+      "question": "What is the capital of France?",
+      "expected_answer": null,
+      "expected_source": null,
+      "expected_abstain": true,
+      "actual_answer": "I couldn't find enough relevant information in the uploaded documents to answer that question.",
+      "sources": [],
+      "abstained": true,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": null,
+      "max_score": 0.2277
+    },
+    {
+      "question": "What is Alice Johnson's role?",
+      "expected_answer": "Engineer",
+      "expected_source": "employees",
+      "expected_abstain": false,
+      "actual_answer": "Row 1: name: Alice Johnson | role: Engineer | department: Platform | location: Austin",
+      "sources": [
+        {
+          "filename": "employees.csv",
+          "page": null,
+          "chunk_id": "chunk_2c1122f3f3c5",
+          "score": 0.3202,
+          "row_number": 1,
+          "preview": "Row 1: name: Alice Johnson | role: Engineer | department: Platform | location: Austin"
+        }
+      ],
+      "abstained": false,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": true,
+      "max_score": 0.3202
+    },
+    {
+      "question": "What is the remote work policy?",
+      "expected_answer": "three days",
+      "expected_source": "remote_work",
+      "expected_abstain": false,
+      "actual_answer": "Remote Work Guidelines\r\n======================\r\n\r\nEligible employees may work remotely up to three days per week.\r\nCore collaboration hours are 10:00 AM to 3:00 PM local time.\r\nEmployees must be reachable on company chat and email during core hours.\r\nEquipment such as laptops and monitors may be requested through IT support.\r\nSecurity: company VPN must be used when accessing internal systems from outside the office.",
+      "sources": [
+        {
+          "filename": "remote_work.txt",
+          "page": null,
+          "chunk_id": "chunk_ab95720c7b26",
+          "score": 0.3128,
+          "row_number": null,
+          "preview": "Remote Work Guidelines\r ======================\r \r Eligible employees may work remotely up to three days per week.\r Core collaboration hours are 10:00 AM to 3:0\u2026"
+        }
+      ],
+      "abstained": false,
+      "retrieval_hit": true,
+      "answer_correct": true,
+      "citation_correct": true,
+      "max_score": 0.3128
+    }
+  ]
+}
